@@ -19,8 +19,8 @@
                 <h1>Crystals Collector!</h1>
             </div>
         </div>
-        <div class="row" id="instructions">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6" id="instructions">
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to
                     your total score.</p>
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <div class="col-md-4" id="ranNum">
-
+                <span id="randomNum"></span>
             </div>
             <div class="col-md-2" id="score">
                 <div class="row">
@@ -48,28 +48,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12" id="crystals">
-
+            <div class="col-md-2" id="crystals">
+                <span id="blueCrystal"></span>
+            </div>
+            <div class="col-md-2" id="crystals">
+                <span id="greenCrystal"></span>
+            </div>
+            <div class="col-md-2" id="crystals">
+                <span id="purpleCrystal"></span>
+            </div>
+            <div class="col-md-2" id="crystals">
+                <span id="tealCrystal"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-5" id="infoScore">
                 <h6>Your total score is:</h6>
             </div>
         </div>
         <div class="row">
             <div class="col-md-5" id="guess">
-
+                <span id="totalScore"></span>
             </div>
         </div>
     </div>
 
 
-
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
 

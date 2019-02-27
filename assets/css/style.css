@@ -3,22 +3,44 @@
 }
 
 #instructions {
-
+    background-color: aqua;
 }
 
 #ranNum {
-
+    background-color: green;
 }
 
 #score {
+    background-color: yellow;
+}
 
+#blueCrystal {
+    float: left;
+}
+
+#greenCrystal {
+    float: left;
+}
+
+#purpleCrystal {
+    float: left;
+}
+
+#tealCrystal {
+    float: left;
 }
 
 #crystals {
 
 }
 
-#guess {
+#infoScore {
+    clear: both;
+    background-color: blue;
+}
 
+#guess {
+    background-color: peru;
+    padding: 20px;
 }
 
