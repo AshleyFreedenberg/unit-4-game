@@ -1,50 +1,119 @@
 
-var randomNum = Math.floor(Math.random() * 101) + 19;
-
 var wins = 0;
 var losses = 0;
 var totalScore = 0;
+var randomNum;
+var crystals = {};
 
-var crystals = {
-    blueCrystal: Math.floor(Math.random() * 12) + 1,
-    greenCrystal: Math.floor(Math.random() * 12) + 1,
-    purpleCrystal: Math.floor(Math.random() * 12) + 1,
-    tealCrystal: Math.floor(Math.random() * 12) + 1,
+startGame();
+
+function startGame() {
+    randomNum = Math.floor(Math.random() * 101) + 19;
+
+    crystals = {
+        blueCrystal: Math.floor(Math.random() * 12) + 1,
+        greenCrystal: Math.floor(Math.random() * 12) + 1,
+        purpleCrystal: Math.floor(Math.random() * 12) + 1,
+        tealCrystal: Math.floor(Math.random() * 12) + 1,
+    }
+
+    $("#randomNum").html(randomNum);
+
 }
+
 
 $("#blueCrystal").on("click", function () {
     var crystalValBlue = (crystals.blueCrystal);
     totalScore += crystalValBlue;
-    console.log(totalScore);
     $("#totalScore").html(totalScore);
-   
+
     if (totalScore === randomNum) {
-        alert("You Won, Keep Playing!");
         wins++;
-        var totalScore = 0;
+        alert("You Won, Keep Playing!");
+        totalScore = 0;
         $("#wins").html(wins);
+        startGame();
     }
-    
+
     else if (totalScore > randomNum) {
-        alert("You Lost, Try Again!")
         losses++
-        var totalScore = 0;
+        alert("You Lost, Try Again!")
+        totalScore = 0;
         $("#losses").html(losses);
+        startGame();
     }
 });
-console.log(totalScore === randomNum);
 
+$("#greenCrystal").on("click", function () {
+    var crystalValGreen = (crystals.greenCrystal);
+    totalScore += crystalValGreen;
+    $("#totalScore").html(totalScore);
 
+    if (totalScore === randomNum) {
+        wins++;
+        alert("You Won, Keep Playing!");
+        totalScore = 0;
+        $("#wins").html(wins);
+        startGame();
+    }
 
-$("#randomNum").html(randomNum);
+    else if (totalScore > randomNum) {
+        losses++
+        alert("You Lost, Try Again!")
+        totalScore = 0;
+        $("#losses").html(losses);
+        startGame();
+    }
+});
+
+$("#purpleCrystal").on("click", function () {
+    var crystalValPurple = (crystals.purpleCrystal);
+    totalScore += crystalValPurple;
+    $("#totalScore").html(totalScore);
+
+    if (totalScore === randomNum) {
+        wins++;
+        alert("You Won, Keep Playing!");
+        totalScore = 0;
+        $("#wins").html(wins);
+        startGame();
+    }
+
+    else if (totalScore > randomNum) {
+        losses++
+        alert("You Lost, Try Again!")
+        totalScore = 0;
+        $("#losses").html(losses);
+        startGame();
+    }
+});
+
+$("#tealCrystal").on("click", function () {
+    var crystalValTeal = (crystals.tealCrystal);
+    totalScore += crystalValTeal;
+    $("#totalScore").html(totalScore);
+
+    if (totalScore === randomNum) {
+        wins++;
+        alert("You Won, Keep Playing!");
+        totalScore = 0;
+        $("#wins").html(wins);
+        startGame();
+    }
+
+    else if (totalScore > randomNum) {
+        losses++
+        alert("You Lost, Try Again!")
+        totalScore = 0;
+        $("#losses").html(losses);
+        startGame();
+    }
+});
 
 $("#blueCrystal").html("<img src='assets/images/BlueCrystal.png'>")
 $("#greenCrystal").html("<img src='assets/images/GreenCrystal.png'>")
 $("#purpleCrystal").html("<img src='assets/images/PurpleCrystal.png'>")
 $("#tealCrystal").html("<img src='assets/images/TealCrystal.png'>")
 
-console.log("blueCrystal", crystals.blueCrystal);
-console.log("greenCrystal", crystals.greenCrystal);
-console.log("purpleCrystal", crystals.purpleCrystal);
-console.log("tealCrystal", crystals.tealCrystal);
+
 
